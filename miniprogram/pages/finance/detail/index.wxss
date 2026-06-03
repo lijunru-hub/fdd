@@ -1,0 +1,353 @@
+.page-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-app-bar {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn .icon {
+  font-size: 32px;
+  color: #374151;
+}
+
+.title-text {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+.status-tag {
+  padding: 4px 10px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 16px;
+  padding-bottom: 160px;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #1677ff 0%, #096dd9 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.summary-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.summary-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.item-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.item-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.item-value.expense {
+  color: #ffd43b;
+}
+
+.item-value.income {
+  color: #86efac;
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.reminder-bar {
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reminder-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reminder-icon {
+  font-size: 18px;
+}
+
+.reminder-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #92400e;
+}
+
+.reminder-arrow {
+  font-size: 13px;
+  color: #92400e;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.card-icon.blue {
+  background-color: #e0f2fe;
+}
+
+.card-icon.green {
+  background-color: #dcfce7;
+}
+
+.card-icon.orange {
+  background-color: #fef3c7;
+}
+
+.card-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.add-btn {
+  padding: 6px 14px;
+  background-color: #1677ff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+}
+
+.card-content {
+  margin-bottom: 12px;
+}
+
+.info-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.info-value.expense {
+  color: #dc2626;
+}
+
+.info-value.income {
+  color: #16a34a;
+}
+
+.card-arrow {
+  float: right;
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+.card-summary {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.summary-left, .summary-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.summary-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.summary-value.expense {
+  color: #dc2626;
+}
+
+.bottom-space {
+  height: 20px;
+}
+
+.bottom-action {
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.add-reminder-btn {
+  width: 100%;
+  height: 48px;
+  background-color: #1677ff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+.custom-tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 100;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+}
+
+.tab-item .tab-icon {
+  font-size: 24px;
+  color: #9ca3af;
+}
+
+.tab-item .tab-text {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.tab-item.active .tab-icon,
+.tab-item.active .tab-text {
+  color: #1677ff;
+}

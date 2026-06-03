@@ -1,0 +1,158 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="app-title">
+      <text class="icon">🏠</text>
+      <text class="title-text">AssetFlow Pro</text>
+    </view>
+    <view class="header-actions">
+      <view class="action-btn" bindtap="handleDownload">
+        <text class="icon">⬇️</text>
+      </view>
+      <view class="action-btn primary" bindtap="addProperty">
+        <text class="icon">+</text>
+        <text class="btn-text">新增</text>
+      </view>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <view class="filter-bar">
+      <view class="region-select">
+        <text class="select-text">全区域</text>
+        <text class="icon arrow">▼</text>
+      </view>
+      <scroll-view class="filter-tabs" scroll-x>
+        <view class="filter-tab active">全部</view>
+        <view class="filter-tab">贷款审批中</view>
+        <view class="filter-tab">过户中</view>
+        <view class="filter-tab">装修中</view>
+        <view class="filter-tab">出售中</view>
+      </scroll-view>
+    </view>
+
+    <view class="property-list">
+      <view class="property-card">
+        <view class="property-content" bindtap="goToDetail" data-id="1">
+          <image class="property-image" src="https://picsum.photos/120/100" mode="aspectFill" />
+          <view class="property-info">
+            <view class="property-header">
+              <text class="property-title">浦东新区·汤臣一品 3栋 1201</text>
+              <view class="status-tag decorating">装修中</view>
+            </view>
+            <text class="property-spec">4室2厅 | 185m² | 南北通透</text>
+            <view class="property-footer">
+              <text class="price">买入价: ¥12,500,000</text>
+              <view class="agent-info">
+                <text class="agent-name">张总</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="property-actions">
+          <view class="action-item" bindtap="editProperty" data-id="1">
+            <text class="icon">✏️</text>
+            <text class="action-text">编辑</text>
+          </view>
+          <view class="action-item" bindtap="viewLedger">
+            <text class="icon">📒</text>
+            <text class="action-text">账本</text>
+          </view>
+          <view class="action-item primary" bindtap="viewDetail" data-id="1">
+            <text class="icon">📋</text>
+            <text class="action-text">详情</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="property-card">
+        <view class="property-content" bindtap="goToDetail" data-id="2">
+          <image class="property-image" src="https://picsum.photos/120/100?2" mode="aspectFill" />
+          <view class="property-info">
+            <view class="property-header">
+              <text class="property-title">徐汇区·尚海湾豪庭 5栋 802</text>
+              <view class="status-tag selling">出售中</view>
+            </view>
+            <text class="property-spec">3室2厅 | 142m² | 全明户型</text>
+            <view class="property-footer">
+              <text class="price">买入价: ¥8,800,000</text>
+              <view class="agent-info">
+                <text class="agent-name">李董</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="property-actions">
+          <view class="action-item" bindtap="archiveProperty">
+            <text class="icon">📁</text>
+            <text class="action-text">归档</text>
+          </view>
+          <view class="action-item" bindtap="editProperty" data-id="2">
+            <text class="icon">✏️</text>
+            <text class="action-text">编辑</text>
+          </view>
+          <view class="action-item" bindtap="viewLedger">
+            <text class="icon">📒</text>
+            <text class="action-text">账本</text>
+          </view>
+          <view class="action-item primary" bindtap="viewDetail" data-id="2">
+            <text class="icon">📋</text>
+            <text class="action-text">详情</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <view class="archive-section">
+      <view class="section-divider">
+        <view class="divider-line"></view>
+        <text class="divider-text">已归档房源</text>
+        <view class="divider-line"></view>
+      </view>
+      <view class="property-card archived">
+        <view class="property-content" bindtap="goToDetail" data-id="3">
+          <image class="property-image" src="https://picsum.photos/120/100?3" mode="aspectFill" />
+          <view class="property-info">
+            <view class="property-header">
+              <text class="property-title">闵行区·万科城市花园 12栋</text>
+              <view class="status-tag sold">已出售</view>
+            </view>
+            <text class="property-spec">2室1厅 | 89m²</text>
+            <view class="property-footer">
+              <text class="price sold">卖出价: ¥6,200,000</text>
+            </view>
+          </view>
+        </view>
+        <view class="property-actions">
+          <view class="action-item" bindtap="viewLedger">
+            <text class="icon">📒</text>
+            <text class="action-text">账本</text>
+          </view>
+          <view class="action-item primary" bindtap="viewDetail" data-id="3">
+            <text class="icon">📋</text>
+            <text class="action-text">详情</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </main>
+
+  <view class="custom-tab-bar">
+    <view class="tab-item active">
+      <text class="tab-icon">🏠</text>
+      <text class="tab-text">房源</text>
+    </view>
+    <view class="tab-item" bindtap="goToFinance">
+      <text class="tab-icon">💰</text>
+      <text class="tab-text">财务</text>
+    </view>
+    <view class="tab-item" bindtap="goToReminders">
+      <text class="tab-icon">📝</text>
+      <text class="tab-text">代办</text>
+    </view>
+    <view class="tab-item" bindtap="goToProfile">
+      <text class="tab-icon">👤</text>
+      <text class="tab-text">我的</text>
+    </view>
+  </view>
+</view>

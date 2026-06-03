@@ -1,0 +1,128 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="icon">‹</text>
+    </view>
+    <text class="title-text">房源详情</text>
+    <view class="share-btn" bindtap="shareProperty">
+      <text class="icon">⋮</text>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <view class="image-slider">
+      <swiper class="swiper" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffffff" autoplay circular>
+        <swiper-item>
+          <image class="slide-image" src="https://picsum.photos/800/600" mode="aspectFill" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="https://picsum.photos/800/600?2" mode="aspectFill" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="https://picsum.photos/800/600?3" mode="aspectFill" />
+        </swiper-item>
+      </swiper>
+      <view class="image-count">
+        <text class="count-text">1/3</text>
+      </view>
+    </view>
+
+    <view class="price-section">
+      <view class="price-row">
+        <text class="price-symbol">¥</text>
+        <text class="price-value">850</text>
+        <text class="price-unit">万</text>
+      </view>
+      <text class="price-desc">单价: 70,833元/㎡</text>
+    </view>
+
+    <view class="info-card">
+      <text class="property-title">阳光花园小区 3室2厅2卫</text>
+      <text class="property-location">📍 北京市朝阳区望京街道阳光花园小区12号楼</text>
+      <view class="property-tags">
+        <view class="tag">精装</view>
+        <view class="tag">南北通透</view>
+        <view class="tag">学区房</view>
+        <view class="tag">地铁口</view>
+      </view>
+    </view>
+
+    <view class="specs-card">
+      <view class="specs-title">房源信息</view>
+      <view class="specs-grid">
+        <view class="spec-item">
+          <text class="spec-value">120</text>
+          <text class="spec-label">建筑面积(㎡)</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">3室</text>
+          <text class="spec-label">户型</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">2厅</text>
+          <text class="spec-label">厅</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">2卫</text>
+          <text class="spec-label">卫</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">15层</text>
+          <text class="spec-label">楼层</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">南北</text>
+          <text class="spec-label">朝向</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">2018</text>
+          <text class="spec-label">建成年代</text>
+        </view>
+        <view class="spec-item">
+          <text class="spec-value">精装</text>
+          <text class="spec-label">装修情况</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="details-card">
+      <view class="details-title">房源描述</view>
+      <text class="details-content">
+        该房源位于望京核心地段，交通便利，紧邻地铁14号线望京南站。小区环境优美，绿化率高，配套设施完善。房屋为精装修，家具家电齐全，可拎包入住。学区划片重点小学，适合有孩子的家庭。南北通透户型，采光极佳，视野开阔。业主诚心出售，价格可谈。
+      </text>
+    </view>
+
+    <view class="contact-card">
+      <view class="contact-title">联系经纪人</view>
+      <view class="agent-info">
+        <view class="agent-avatar">
+          <text class="avatar-text">张</text>
+        </view>
+        <view class="agent-details">
+          <text class="agent-name">张经理</text>
+          <text class="agent-phone">📞 138****5678</text>
+        </view>
+        <button class="call-btn" bindtap="callAgent">
+          <text class="call-icon">📞</text>
+        </button>
+      </view>
+    </view>
+  </main>
+
+  <view class="bottom-bar">
+    <view class="bottom-left">
+      <view class="action-item" bindtap="collectProperty">
+        <text class="action-icon">❤️</text>
+        <text class="action-text">收藏</text>
+      </view>
+      <view class="action-item" bindtap="shareProperty">
+        <text class="action-icon">📤</text>
+        <text class="action-text">分享</text>
+      </view>
+    </view>
+    <view class="bottom-right">
+      <button class="btn-secondary" bindtap="chatAgent">咨询</button>
+      <button class="btn-primary" bindtap="viewProperty">预约看房</button>
+    </view>
+  </view>
+</view>

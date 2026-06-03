@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/property/index",
+    "pages/property/detail/index",
+    "pages/property/edit/index",
+    "pages/finance/index",
+    "pages/finance/detail/index",
+    "pages/reminders/index",
+    "pages/profile/index",
+    "pages/partners/index",
+    "pages/holders/index"
+  ],
+  "window": {
+    "backgroundColor": "#fcf9f8",
+    "backgroundTextStyle": "dark",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#fcf9f8",
+    "navigationBarTitleText": "AssetFlow Pro",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,152 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="icon">‹</text>
+    </view>
+    <text class="page-title">合伙人管理</text>
+    <view class="add-btn" bindtap="addPartner">
+      <text class="icon">+</text>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <view class="search-bar">
+      <text class="icon search-icon">🔍</text>
+      <input class="search-input" placeholder="搜索姓名或手机号" type="text" bindinput="onSearchInput" />
+      <view class="filter-btn" bindtap="showFilter">
+        <text class="icon">⚙️</text>
+      </view>
+    </view>
+
+    <view class="partner-list">
+      <view class="partner-card">
+        <view class="card-bg"></view>
+        <view class="card-header">
+          <view class="partner-info">
+            <view class="avatar-placeholder">
+              <text class="avatar-text">张</text>
+            </view>
+            <view class="partner-details">
+              <text class="partner-name">张三</text>
+              <text class="partner-id">合伙人 ID: P-2023-001</text>
+            </view>
+          </view>
+          <view class="status-tag active">
+            <view class="status-dot"></view>
+            <text>活跃</text>
+          </view>
+        </view>
+        <view class="card-body">
+          <view class="info-row">
+            <text class="icon small-icon">📱</text>
+            <text class="info-text">138****5678</text>
+          </view>
+          <view class="info-row">
+            <text class="icon small-icon">🆔</text>
+            <text class="info-text">410102****1234</text>
+          </view>
+        </view>
+        <view class="card-footer">
+          <button class="action-btn edit" bindtap="editPartner" data-name="张三">
+            <text class="icon">✏️</text>
+            <text>编辑</text>
+          </button>
+          <button class="action-btn delete" bindtap="showDeleteConfirm" data-name="张三">
+            <text class="icon">🗑️</text>
+            <text>删除</text>
+          </button>
+        </view>
+      </view>
+
+      <view class="partner-card">
+        <view class="card-bg"></view>
+        <view class="card-header">
+          <view class="partner-info">
+            <image class="avatar-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8Pbx5Q1Zkl4M9z-nn5HbCfjJXkiUcYMVZVIxA4C3d2hv9M9rsf4gGOU8pc4i7bQCy-t8SropB9VlDvwIHHmI9ysNsLq2Grkqro1lb7ln185anJ_aV0C6HoF6Fiwv_SKTjAMTbPf2RXJi5dH6P514vwGWSFe24moR3XXuZiuDFLyBby9DKYnK29cPAmI9m9IcJPPW5_daG6bb8XZaV9qBfBnGa94u-5-5wUKfUd73rRnmbYsPw20s4BbvdrYgWSzyM3ITzaANBL4" mode="aspectFill" />
+            <view class="partner-details">
+              <text class="partner-name">李娜</text>
+              <text class="partner-id">合伙人 ID: P-2023-042</text>
+            </view>
+          </view>
+          <view class="status-tag pending">
+            <view class="status-dot"></view>
+            <text>待审核</text>
+          </view>
+        </view>
+        <view class="card-body">
+          <view class="info-row">
+            <text class="icon small-icon">📱</text>
+            <text class="info-text">159****8822</text>
+          </view>
+          <view class="info-row">
+            <text class="icon small-icon">🆔</text>
+            <text class="info-text">110105****8899</text>
+          </view>
+        </view>
+        <view class="card-footer">
+          <button class="action-btn edit" bindtap="editPartner" data-name="李娜">
+            <text class="icon">✏️</text>
+            <text>编辑</text>
+          </button>
+          <button class="action-btn delete" bindtap="showDeleteConfirm" data-name="李娜">
+            <text class="icon">🗑️</text>
+            <text>删除</text>
+          </button>
+        </view>
+      </view>
+
+      <view class="partner-card">
+        <view class="card-bg"></view>
+        <view class="card-header">
+          <view class="partner-info">
+            <view class="avatar-placeholder">
+              <text class="avatar-text">王</text>
+            </view>
+            <view class="partner-details">
+              <text class="partner-name">王伟</text>
+              <text class="partner-id">合伙人 ID: P-2022-118</text>
+            </view>
+          </view>
+          <view class="status-tag disabled">
+            <view class="status-dot"></view>
+            <text>已停用</text>
+          </view>
+        </view>
+        <view class="card-body">
+          <view class="info-row">
+            <text class="icon small-icon">📱</text>
+            <text class="info-text">133****1111</text>
+          </view>
+          <view class="info-row">
+            <text class="icon small-icon">🆔</text>
+            <text class="info-text">320102****5566</text>
+          </view>
+        </view>
+        <view class="card-footer">
+          <button class="action-btn edit" bindtap="editPartner" data-name="王伟">
+            <text class="icon">✏️</text>
+            <text>编辑</text>
+          </button>
+          <button class="action-btn delete" bindtap="showDeleteConfirm" data-name="王伟">
+            <text class="icon">🗑️</text>
+            <text>删除</text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </main>
+
+  <view class="modal-overlay" wx:if="{{showModal}}" bindtap="hideDeleteConfirm">
+    <view class="modal-content" catchtap="stopPropagation">
+      <view class="modal-icon">
+        <text class="icon">⚠️</text>
+      </view>
+      <text class="modal-title">确认删除</text>
+      <text class="modal-message">您确定要删除合伙人 <text class="highlight">{{deleteName}}</text> 吗？此操作无法撤销。</text>
+      <view class="modal-actions">
+        <button class="modal-btn cancel" bindtap="hideDeleteConfirm">取消</button>
+        <button class="modal-btn confirm" bindtap="confirmDelete">删除</button>
+      </view>
+    </view>
+  </view>
+</view>

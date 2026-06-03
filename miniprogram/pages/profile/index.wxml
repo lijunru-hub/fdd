@@ -1,0 +1,112 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="app-title">
+      <text class="icon">🏠</text>
+      <text class="title-text">AssetFlow Pro</text>
+    </view>
+    <view class="settings-btn" bindtap="goToSettings">
+      <text class="icon">⚙️</text>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <section class="user-card">
+      <view class="card-bg"></view>
+      <view class="user-info">
+        <image class="avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd-3IOgEnvRIJmT-8to-wtzXGejvM0y27mQbfqDDaWwvQICZ-o1My720BzIRwtxbpXuBhbADNYfkbaKyb_jFJrYQyQ-k3RTbHFG6uH3mlG6cXD-AKz-91p3MyqAxOM1Qn5AgJ42XNkrxndqlDiFqkNRBzWWzCWEfjcpEFRiu7TCS_IDS3nxcTS_-yyvM24oTELaWoDbgqpulx6GZXwc9oask_nDrhzs1uGeetK3zl77f1a-gIc_XprhOOnKTh5fiQjagwUpJjW7Sk" mode="aspectFill" />
+        <view class="user-details">
+          <text class="user-name">WeChat User</text>
+          <view class="user-meta">
+            <text class="role-tag">Administrator</text>
+            <text class="user-id">ID: 8849201</text>
+          </view>
+        </view>
+        <view class="arrow-icon">
+          <text class="icon">›</text>
+        </view>
+      </view>
+    </section>
+
+    <section class="business-grid">
+      <text class="section-title">My Business</text>
+      <view class="grid-container">
+        <view class="grid-item" bindtap="goToProperty">
+          <view class="item-icon bg-primary">
+            <text class="icon">🏢</text>
+          </view>
+          <text class="item-label">房源管理</text>
+        </view>
+        <view class="grid-item" bindtap="goToFinance">
+          <view class="item-icon bg-secondary">
+            <text class="icon">💰</text>
+          </view>
+          <text class="item-label">资金账本</text>
+        </view>
+        <view class="grid-item" bindtap="goToReminders">
+          <view class="notification-badge"></view>
+          <view class="item-icon bg-secondary">
+            <text class="icon">🔔</text>
+          </view>
+          <text class="item-label">代办提醒</text>
+        </view>
+      </view>
+    </section>
+
+    <section class="org-section">
+      <text class="section-title">Organization</text>
+      <view class="list-container">
+        <view class="list-item" bindtap="goToPartners">
+          <view class="item-left">
+            <view class="list-icon">
+              <text class="icon">🤝</text>
+            </view>
+            <text class="item-text">合伙人管理</text>
+          </view>
+          <text class="icon arrow">›</text>
+        </view>
+        <view class="list-item" bindtap="goToHolders">
+          <view class="item-left">
+            <view class="list-icon">
+              <text class="icon">📛</text>
+            </view>
+            <text class="item-text">代持人管理</text>
+          </view>
+          <text class="icon arrow">›</text>
+        </view>
+        <view class="list-item" bindtap="goToAssistants">
+          <view class="item-left">
+            <view class="list-icon">
+              <text class="icon">👥</text>
+            </view>
+            <text class="item-text">协管人员管理</text>
+          </view>
+          <text class="icon arrow">›</text>
+        </view>
+      </view>
+    </section>
+
+    <button class="logout-btn" bindtap="confirmLogout">
+      <text class="logout-text">Log Out</text>
+    </button>
+  </main>
+
+  <view class="custom-tab-bar">
+    <view class="tab-item" bindtap="goToProperty">
+      <text class="tab-icon">🏢</text>
+      <text class="tab-text">房源</text>
+    </view>
+    <view class="tab-item" bindtap="goToFinance">
+      <text class="tab-icon">💰</text>
+      <text class="tab-text">资金</text>
+    </view>
+    <view class="tab-item" bindtap="goToReminders">
+      <view class="tab-badge"></view>
+      <text class="tab-icon">🔔</text>
+      <text class="tab-text">代办</text>
+    </view>
+    <view class="tab-item active">
+      <text class="tab-icon">👤</text>
+      <text class="tab-text">我的</text>
+    </view>
+  </view>
+</view>

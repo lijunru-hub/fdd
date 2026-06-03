@@ -1,0 +1,160 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="icon">‹</text>
+    </view>
+    <text class="title-text">浦东新区·汤臣一品 3栋 1201</text>
+    <view class="status-tag">装修中</view>
+  </header>
+
+  <main class="main-content">
+    <view class="summary-card">
+      <text class="summary-label">资金账本</text>
+      <text class="summary-subtitle">净利润</text>
+      <text class="summary-amount">¥12,450.00</text>
+      <view class="summary-row">
+        <view class="summary-item">
+          <text class="item-label">总收入</text>
+          <text class="item-value income">¥24,000</text>
+        </view>
+        <view class="divider"></view>
+        <view class="summary-item">
+          <text class="item-label">总支出</text>
+          <text class="item-value expense">¥11,550</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="reminder-bar" bindtap="viewReminders">
+      <view class="reminder-left">
+        <text class="reminder-icon">⚠️</text>
+        <text class="reminder-text">5项待提醒</text>
+      </view>
+      <text class="reminder-arrow">查看详情 ›</text>
+    </view>
+
+    <view class="info-card" bindtap="viewMortgage">
+      <view class="card-header">
+        <view class="card-icon blue">🏠</view>
+        <text class="card-title">按揭</text>
+      </view>
+      <view class="card-content">
+        <view class="info-row">
+          <view class="info-item">
+            <text class="info-label">每月金额</text>
+            <text class="info-value expense">¥1,450.00</text>
+          </view>
+          <view class="info-item">
+            <text class="info-label">下次还款日</text>
+            <text class="info-value">10月28日</text>
+          </view>
+        </view>
+        <view class="info-row">
+          <view class="info-item">
+            <text class="info-label">首付款</text>
+            <text class="info-value">¥500,000.00</text>
+          </view>
+          <view class="info-item">
+            <text class="info-label">已还期数</text>
+            <text class="info-value">12 / 360</text>
+          </view>
+        </view>
+      </view>
+      <text class="card-arrow">›</text>
+    </view>
+
+    <view class="info-card" bindtap="viewRent">
+      <view class="card-header">
+        <view class="card-icon green">💰</view>
+        <text class="card-title">收租</text>
+      </view>
+      <view class="card-content">
+        <view class="info-row">
+          <view class="info-item">
+            <text class="info-label">每月租金</text>
+            <text class="info-value income">¥8,000.00</text>
+          </view>
+          <view class="info-item">
+            <text class="info-label">收租次数</text>
+            <text class="info-value">3次</text>
+          </view>
+        </view>
+        <view class="info-row">
+          <view class="info-item">
+            <text class="info-label">租客</text>
+            <text class="info-value">张三</text>
+          </view>
+          <view class="info-item">
+            <text class="info-label">联系电话</text>
+            <text class="info-value">138 0013 8000</text>
+          </view>
+        </view>
+      </view>
+      <text class="card-arrow">›</text>
+    </view>
+
+    <view class="info-card">
+      <view class="card-header">
+        <view class="card-icon blue">📈</view>
+        <text class="card-title">其他收入</text>
+        <button class="add-btn" bindtap="addIncome">+ 新增收入</button>
+      </view>
+      <view class="card-summary">
+        <view class="summary-left">
+          <text class="summary-label">累计收入项</text>
+          <text class="summary-count">2项</text>
+        </view>
+        <view class="summary-right">
+          <text class="summary-label">总计收入金额</text>
+          <text class="summary-value income">¥4,000.00</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="info-card">
+      <view class="card-header">
+        <view class="card-icon orange">📉</view>
+        <text class="card-title">其他支出</text>
+        <button class="add-btn" bindtap="addExpense">+ 新增支出</button>
+      </view>
+      <view class="card-summary">
+        <view class="summary-left">
+          <text class="summary-label">累计支出项</text>
+          <text class="summary-count">3项</text>
+        </view>
+        <view class="summary-right">
+          <text class="summary-label">总计支出金额</text>
+          <text class="summary-value expense">-¥80,950.00</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="bottom-space"></view>
+  </main>
+
+  <view class="bottom-action">
+    <button class="add-reminder-btn" bindtap="addReminder">
+      <text class="btn-icon">+</text>
+      <text class="btn-text">新增提醒</text>
+    </button>
+  </view>
+
+  <view class="custom-tab-bar">
+    <view class="tab-item" bindtap="goToProperty">
+      <text class="tab-icon">🏠</text>
+      <text class="tab-text">房源</text>
+    </view>
+    <view class="tab-item active">
+      <text class="tab-icon">💰</text>
+      <text class="tab-text">财务</text>
+    </view>
+    <view class="tab-item" bindtap="goToReminders">
+      <text class="tab-icon">📝</text>
+      <text class="tab-text">代办</text>
+    </view>
+    <view class="tab-item" bindtap="goToProfile">
+      <text class="tab-icon">👤</text>
+      <text class="tab-text">我的</text>
+    </view>
+  </view>
+</view>

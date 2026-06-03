@@ -1,0 +1,220 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="app-title">
+      <text class="icon">🔔</text>
+      <text class="title-text">AssetFlow Pro</text>
+    </view>
+    <view class="add-btn" bindtap="addReminder">
+      <text class="icon">+</text>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <view class="stats-section">
+      <view class="stat-item urgent">
+        <text class="stat-number">3</text>
+        <text class="stat-label">紧急</text>
+      </view>
+      <view class="stat-item normal">
+        <text class="stat-number">5</text>
+        <text class="stat-label">待处理</text>
+      </view>
+      <view class="stat-item completed">
+        <text class="stat-number">12</text>
+        <text class="stat-label">已完成</text>
+      </view>
+    </view>
+
+    <view class="filter-tabs">
+      <view class="filter-tab active">全部</view>
+      <view class="filter-tab">紧急</view>
+      <view class="filter-tab">待处理</view>
+      <view class="filter-tab">已完成</view>
+    </view>
+
+    <view class="reminder-list">
+      <view class="reminder-card urgent">
+        <view class="reminder-priority"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title">合同签署提醒</text>
+            <text class="reminder-time">今天 14:30</text>
+          </view>
+          <text class="reminder-desc">与客户张三签署阳光花园小区房屋买卖合同</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">🏠 阳光花园</view>
+            <view class="meta-tag">👤 张三</view>
+          </view>
+          <view class="reminder-actions">
+            <view class="action-btn secondary" bindtap="markComplete">完成</view>
+            <view class="action-btn primary" bindtap="viewDetail">详情</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="reminder-card urgent">
+        <view class="reminder-priority"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title">定金支付确认</text>
+            <text class="reminder-time">今天 16:00</text>
+          </view>
+          <text class="reminder-desc">确认客户李娜的购房定金到账情况</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">💰 50万</view>
+            <view class="meta-tag">👤 李娜</view>
+          </view>
+          <view class="reminder-actions">
+            <view class="action-btn secondary" bindtap="markComplete">完成</view>
+            <view class="action-btn primary" bindtap="viewDetail">详情</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="reminder-card normal">
+        <view class="reminder-priority normal"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title">房源核验</text>
+            <text class="reminder-time">明天 09:00</text>
+          </view>
+          <text class="reminder-desc">核验星河湾4室3厅房源信息真实性</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">🏠 星河湾</view>
+          </view>
+          <view class="reminder-actions">
+            <view class="action-btn secondary" bindtap="markComplete">完成</view>
+            <view class="action-btn primary" bindtap="viewDetail">详情</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="reminder-card normal">
+        <view class="reminder-priority normal"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title">代持人证件审核</text>
+            <text class="reminder-time">明天 14:00</text>
+          </view>
+          <text class="reminder-desc">审核陈伟提交的代持人身份证明材料</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">📋 待审核</view>
+            <view class="meta-tag">👤 陈伟</view>
+          </view>
+          <view class="reminder-actions">
+            <view class="action-btn secondary" bindtap="markComplete">完成</view>
+            <view class="action-btn primary" bindtap="viewDetail">详情</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="reminder-card normal">
+        <view class="reminder-priority normal"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title">合伙人会议</text>
+            <text class="reminder-time">本周三 10:00</text>
+          </view>
+          <text class="reminder-desc">参加月度合伙人业绩复盘会议</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">📅 周三</view>
+            <view class="meta-tag">👥 全体合伙人</view>
+          </view>
+          <view class="reminder-actions">
+            <view class="action-btn secondary" bindtap="markComplete">完成</view>
+            <view class="action-btn primary" bindtap="viewDetail">详情</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="reminder-card completed">
+        <view class="reminder-priority completed"></view>
+        <view class="reminder-content">
+          <view class="reminder-header">
+            <text class="reminder-title completed">碧水湾别墅交易完成</text>
+            <text class="reminder-time">昨天</text>
+          </view>
+          <text class="reminder-desc">完成碧水湾别墅的全部交易流程</text>
+          <view class="reminder-meta">
+            <view class="meta-tag">✅ 已完成</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </main>
+
+  <view class="custom-tab-bar">
+    <view class="tab-item" bindtap="goToProperty">
+      <text class="tab-icon">🏢</text>
+      <text class="tab-text">房源</text>
+    </view>
+    <view class="tab-item" bindtap="goToFinance">
+      <text class="tab-icon">💰</text>
+      <text class="tab-text">资金</text>
+    </view>
+    <view class="tab-item active">
+      <view class="tab-badge"></view>
+      <text class="tab-icon">🔔</text>
+      <text class="tab-text">代办</text>
+    </view>
+    <view class="tab-item" bindtap="goToProfile">
+      <text class="tab-icon">👤</text>
+      <text class="tab-text">我的</text>
+    </view>
+  </view>
+
+  <view class="modal-overlay" wx:if="{{showCompleteModal}}" bindtap="closeModal">
+    <view class="modal-container" catchtap="preventClose">
+      <view class="modal-header">
+        <text class="modal-title">完成任务</text>
+        <view class="modal-close" bindtap="closeModal">×</view>
+      </view>
+      <view class="modal-body">
+        <view class="form-item">
+          <text class="form-label">完成日期</text>
+          <picker mode="date" value="{{completeDate}}" bindchange="onDateChange">
+            <view class="picker-value">
+              {{completeDate || '请选择日期'}}
+              <text class="picker-arrow">›</text>
+            </view>
+          </picker>
+        </view>
+        <view class="form-item">
+          <text class="form-label">上传图片</text>
+          <view class="upload-area">
+            <view class="upload-list">
+              <view
+                wx:for="{{uploadedImages}}"
+                wx:key="index"
+                class="upload-item"
+                bindtap="previewImage"
+                data-index="{{index}}"
+              >
+                <image src="{{item}}" mode="aspectFill" class="upload-img" />
+                <view class="upload-delete" bindtap="deleteImage" data-index="{{index}}">×</view>
+              </view>
+              <view class="upload-btn" wx:if="{{uploadedImages.length < 9}}" bindtap="chooseImage">
+                <text class="upload-icon">+</text>
+              </view>
+            </view>
+            <text class="upload-tip">最多上传9张图片</text>
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">备注</text>
+          <textarea
+            class="textarea"
+            placeholder="请输入备注信息"
+            value="{{remark}}"
+            bindinput="onRemarkInput"
+            maxlength="500"
+          ></textarea>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="btn-cancel" bindtap="closeModal">取消</button>
+        <button class="btn-confirm" bindtap="confirmComplete">确认完成</button>
+      </view>
+    </view>
+  </view>
+</view>

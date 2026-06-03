@@ -1,0 +1,226 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="icon">‹</text>
+    </view>
+    <text class="title-text">新增房源</text>
+    <view class="placeholder"></view>
+  </header>
+
+  <scroll-view class="main-content" scroll-y>
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">📋</view>
+        <text class="section-title">基础信息</text>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">买入日期</text>
+        <view class="form-input-wrap">
+          <input class="form-input" placeholder="mm/dd/yyyy" type="date" />
+          <text class="input-icon">📅</text>
+        </view>
+      </view>
+
+      <view class="form-row">
+        <view class="form-item half">
+          <text class="form-label">买入总价</text>
+          <view class="form-input-wrap">
+            <text class="input-prefix">¥</text>
+            <input class="form-input" placeholder="0.00" type="digit" />
+          </view>
+        </view>
+        <view class="form-item half">
+          <text class="form-label">首付金额</text>
+          <view class="form-input-wrap">
+            <text class="input-prefix">¥</text>
+            <input class="form-input" placeholder="0.00" type="digit" />
+          </view>
+        </view>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">贷款金额</text>
+        <view class="form-input-wrap">
+          <text class="input-prefix">¥</text>
+          <input class="form-input" placeholder="0.00" type="digit" />
+        </view>
+      </view>
+    </view>
+
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">🏠</view>
+        <text class="section-title">房源信息</text>
+      </view>
+
+      <view class="form-row">
+        <view class="form-item half">
+          <text class="form-label">所在城市</text>
+          <view class="form-select">
+            <text class="select-text">请选择城市</text>
+            <text class="select-arrow">▼</text>
+          </view>
+        </view>
+        <view class="form-item half">
+          <text class="form-label">所在区域</text>
+          <view class="form-select">
+            <text class="select-text">请选择区域</text>
+            <text class="select-arrow">▼</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">详细地址</text>
+        <input class="form-input" placeholder="请输入小区名/楼栋/门牌号" />
+      </view>
+
+      <view class="form-row">
+        <view class="form-item half">
+          <text class="form-label">面积(m²)</text>
+          <input class="form-input" placeholder="请输入面积" type="digit" />
+        </view>
+        <view class="form-item half">
+          <text class="form-label">户型</text>
+          <view class="form-select">
+            <text class="select-text">请选择户型</text>
+            <text class="select-arrow">▼</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">👤</view>
+        <text class="section-title">相关人员</text>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">代持人</text>
+        <view class="form-select">
+          <text class="select-text">请选择代持人</text>
+          <text class="select-arrow">▼</text>
+        </view>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">中介费</text>
+        <view class="form-input-wrap">
+          <text class="input-prefix">¥</text>
+          <input class="form-input" placeholder="请输入中介费用/佣金" type="digit" />
+        </view>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">中介电话</text>
+        <input class="form-input" placeholder="请输入手机号码" type="number" />
+      </view>
+    </view>
+
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">🤝</view>
+        <text class="section-title">合伙人信息</text>
+        <view class="add-btn" bindtap="addPartner">
+          <text class="add-icon">+</text>
+          <text class="add-text">添加合伙人</text>
+        </view>
+      </view>
+
+      <view class="partner-list">
+        <view class="partner-item">
+          <view class="partner-header">
+            <text class="partner-title">合伙人</text>
+            <view class="remove-btn" bindtap="removePartner">
+              <text class="remove-icon">×</text>
+            </view>
+          </view>
+          <view class="form-row">
+            <view class="form-item half">
+              <text class="form-label">姓名</text>
+              <view class="form-select">
+                <text class="select-text">请选择合伙人</text>
+                <text class="select-arrow">▼</text>
+              </view>
+            </view>
+          </view>
+          <view class="form-row">
+            <view class="form-item half">
+              <text class="form-label">股份占比</text>
+              <view class="form-input-wrap">
+                <input class="form-input" placeholder="0" type="digit" />
+                <text class="input-suffix">%</text>
+              </view>
+            </view>
+            <view class="form-item half">
+              <text class="form-label">实际出资金额</text>
+              <view class="form-input-wrap">
+                <text class="input-prefix">¥</text>
+                <input class="form-input" placeholder="0.00" type="digit" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="form-footer">
+        <text class="footer-text">总股份: 0.00% (应: 100.00%)</text>
+      </view>
+    </view>
+
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">📷</view>
+        <text class="section-title">资料与附件</text>
+      </view>
+
+      <view class="upload-section">
+        <text class="upload-label">房源照片(最多9张，首图为封面)</text>
+        <view class="upload-grid">
+          <view class="upload-item" bindtap="uploadImage">
+            <text class="upload-icon">+</text>
+          </view>
+          <view class="upload-item" bindtap="uploadImage">
+            <text class="upload-icon">+</text>
+          </view>
+          <view class="upload-item" bindtap="uploadImage">
+            <text class="upload-icon">+</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="upload-section">
+        <text class="upload-label">证件或合同</text>
+        <view class="upload-grid">
+          <view class="upload-item" bindtap="uploadFile">
+            <text class="upload-icon">📄</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">合同/协议位置</text>
+        <input class="form-input" placeholder="请输入资料存放位置" />
+      </view>
+    </view>
+
+    <view class="form-section">
+      <view class="section-header">
+        <view class="section-icon">📝</view>
+        <text class="section-title">其他</text>
+      </view>
+
+      <view class="form-item">
+        <text class="form-label">备注(选填)</text>
+        <textarea class="form-textarea" placeholder="请输入补充信息" />
+      </view>
+    </view>
+
+    <view class="button-area">
+      <button class="btn-cancel" bindtap="goBack">取消</button>
+      <button class="btn-submit" bindtap="submitForm">提交保存</button>
+    </view>
+  </scroll-view>
+</view>

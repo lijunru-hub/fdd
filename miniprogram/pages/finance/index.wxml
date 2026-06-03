@@ -1,0 +1,130 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <text class="title-text">财务概览</text>
+  </header>
+
+  <main class="main-content">
+    <view class="summary-card">
+      <text class="summary-label">总净利润 (所有房源)</text>
+      <text class="summary-amount">¥45,800.00</text>
+      <view class="summary-grid">
+        <view class="summary-item">
+          <view class="item-header">
+            <text class="item-icon">📈</text>
+            <text class="item-label">总收入</text>
+          </view>
+          <text class="item-value">¥128,500</text>
+        </view>
+        <view class="summary-item">
+          <view class="item-header">
+            <text class="item-icon">📉</text>
+            <text class="item-label">总支出</text>
+          </view>
+          <text class="item-value expense">¥82,700</text>
+        </view>
+        <view class="summary-item">
+          <view class="item-header">
+            <text class="item-icon">🏠</text>
+            <text class="item-label">总月供</text>
+          </view>
+          <text class="item-value expense">¥24,500</text>
+        </view>
+        <view class="summary-item">
+          <view class="item-header">
+            <text class="item-icon">💰</text>
+            <text class="item-label">总月租</text>
+          </view>
+          <text class="item-value">¥38,000</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="section-header">
+      <text class="section-title">房源账本</text>
+    </view>
+
+    <view class="ledger-list">
+      <view class="ledger-card" bindtap="viewLedgerDetail" data-id="1">
+        <view class="card-header">
+          <view class="property-icon">🏢</view>
+          <view class="property-info">
+            <text class="property-name">浦东新区·汤臣一品 3栋 12...</text>
+            <view class="property-meta">
+              <view class="meta-item">
+                <text class="meta-label">本月收入</text>
+                <text class="meta-value income">¥24,000.00</text>
+              </view>
+              <view class="meta-item">
+                <text class="meta-label">本月支出</text>
+                <text class="meta-value expense">¥11,550.00</text>
+              </view>
+            </view>
+          </view>
+          <view class="status-tag decorating">装修中</view>
+        </view>
+        <text class="arrow-icon">›</text>
+      </view>
+
+      <view class="ledger-card" bindtap="viewLedgerDetail" data-id="2">
+        <view class="card-header">
+          <view class="property-icon">🏢</view>
+          <view class="property-info">
+            <text class="property-name">静安区·静安府 5栋 802</text>
+            <view class="property-meta">
+              <view class="meta-item">
+                <text class="meta-label">本月收入</text>
+                <text class="meta-value income">¥12,500.00</text>
+              </view>
+              <view class="meta-item">
+                <text class="meta-label">本月支出</text>
+                <text class="meta-value expense">¥3,200.00</text>
+              </view>
+            </view>
+          </view>
+          <view class="status-tag rented">已出租</view>
+        </view>
+        <text class="arrow-icon">›</text>
+      </view>
+
+      <view class="ledger-card" bindtap="viewLedgerDetail" data-id="3">
+        <view class="card-header">
+          <view class="property-icon">🏢</view>
+          <view class="property-info">
+            <text class="property-name">徐汇区·尚海湾豪庭 2栋 15...</text>
+            <view class="property-meta">
+              <view class="meta-item">
+                <text class="meta-label">本月收入</text>
+                <text class="meta-value">¥0.00</text>
+              </view>
+              <view class="meta-item">
+                <text class="meta-label">本月支出</text>
+                <text class="meta-value expense">¥8,500.00</text>
+              </view>
+            </view>
+          </view>
+          <view class="status-tag vacant">空置待租</view>
+        </view>
+        <text class="arrow-icon">›</text>
+      </view>
+    </view>
+  </main>
+
+  <view class="custom-tab-bar">
+    <view class="tab-item" bindtap="goToProperty">
+      <text class="tab-icon">🏠</text>
+      <text class="tab-text">房源</text>
+    </view>
+    <view class="tab-item active">
+      <text class="tab-icon">💰</text>
+      <text class="tab-text">财务</text>
+    </view>
+    <view class="tab-item" bindtap="goToReminders">
+      <text class="tab-icon">📝</text>
+      <text class="tab-text">代办</text>
+    </view>
+    <view class="tab-item" bindtap="goToProfile">
+      <text class="tab-icon">👤</text>
+      <text class="tab-text">我的</text>
+    </view>
+  </view>
+</view>

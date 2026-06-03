@@ -1,0 +1,138 @@
+<view class="page-container">
+  <header class="top-app-bar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="icon">‹</text>
+    </view>
+    <text class="page-title">代持人管理</text>
+    <view class="add-btn" bindtap="addHolder">
+      <text class="icon">+</text>
+    </view>
+  </header>
+
+  <main class="main-content">
+    <view class="page-header">
+      <text class="header-title">代持人管理</text>
+      <button class="add-holder-btn" bindtap="addHolder">
+        <text class="icon add-icon">+</text>
+        <text class="btn-text">新增代持人</text>
+      </button>
+    </view>
+
+    <section class="holder-list">
+      <view class="holder-card">
+        <view class="card-bg"></view>
+        <view class="card-header">
+          <view class="holder-info">
+            <text class="icon user-icon">👤</text>
+            <text class="holder-name">Chen Wei (陈伟)</text>
+          </view>
+          <view class="status-tag active">活跃</view>
+        </view>
+        <text class="holder-phone">139-1234-5678</text>
+        <view class="card-divider"></view>
+        <view class="card-footer">
+          <button class="footer-btn" bindtap="viewDocuments">
+            <text class="icon">👁️</text>
+            <text>证件</text>
+          </button>
+          <button class="footer-btn" bindtap="editHolder">
+            <text class="icon">✏️</text>
+            <text>编辑</text>
+          </button>
+          <button class="footer-btn delete" bindtap="deleteHolder">
+            <text class="icon">🗑️</text>
+          </button>
+        </view>
+      </view>
+
+      <view class="holder-card">
+        <view class="card-header">
+          <view class="holder-info">
+            <text class="icon user-icon">👤</text>
+            <text class="holder-name">Li Na (李娜)</text>
+          </view>
+          <view class="status-tag pending">待传证件</view>
+        </view>
+        <text class="holder-phone">138-9876-5432</text>
+        <view class="card-divider"></view>
+        <view class="card-footer">
+          <button class="footer-btn" bindtap="viewDocuments">
+            <text class="icon">👁️</text>
+            <text>证件</text>
+          </button>
+          <button class="footer-btn" bindtap="editHolder">
+            <text class="icon">✏️</text>
+            <text>编辑</text>
+          </button>
+          <button class="footer-btn delete" bindtap="deleteHolder">
+            <text class="icon">🗑️</text>
+          </button>
+        </view>
+      </view>
+    </section>
+
+    <section class="detail-section">
+      <view class="section-header">
+        <text class="section-title">代持人详情</text>
+        <button class="save-btn">保存</button>
+      </view>
+
+      <view class="form-grid">
+        <view class="form-item">
+          <text class="form-label">姓名</text>
+          <input class="form-input" type="text" value="Chen Wei" />
+        </view>
+        <view class="form-item">
+          <text class="form-label">电话</text>
+          <input class="form-input" type="text" value="139-1234-5678" />
+        </view>
+        <view class="form-item">
+          <text class="form-label">证件类型</text>
+          <view class="form-select">
+            <text class="select-value">身份证</text>
+            <text class="icon select-arrow">▼</text>
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">证件号码</text>
+          <input class="form-input" type="text" value="410102**********" />
+        </view>
+      </view>
+
+      <view class="upload-section">
+        <text class="upload-label">身份证正面</text>
+        <view class="upload-area">
+          <image class="upload-image" src="https://picsum.photos/200/120" mode="aspectFill" />
+          <view class="upload-overlay">
+            <text class="icon upload-icon">📤</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="upload-section">
+        <text class="upload-label">身份证背面</text>
+        <view class="upload-area">
+          <image class="upload-image" src="https://picsum.photos/200/120" mode="aspectFill" />
+          <view class="upload-overlay">
+            <text class="icon upload-icon">📤</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="toggle-section">
+        <text class="toggle-label">状态</text>
+        <view class="toggle-switch" bindtap="toggleStatus">
+          <view class="toggle-track">
+            <view class="toggle-thumb"></view>
+          </view>
+          <text class="toggle-text">启用</text>
+        </view>
+      </view>
+
+      <view class="action-buttons">
+        <button class="btn-secondary">取消</button>
+        <button class="btn-primary">保存并提交审核</button>
+      </view>
+    </section>
+  </main>
+</view>
