@@ -33,10 +33,14 @@
       <text class="reminder-arrow">查看详情 ›</text>
     </view>
 
-    <view class="info-card" bindtap="viewMortgage">
+    <view class="info-card">
       <view class="card-header">
         <view class="card-icon blue">🏠</view>
         <text class="card-title">按揭</text>
+        <view class="card-actions">
+          <view class="action-btn edit" bindtap="editMortgage">编辑</view>
+          <view class="action-btn detail" bindtap="viewMortgage">详情</view>
+        </view>
       </view>
       <view class="card-content">
         <view class="info-row">
@@ -60,13 +64,16 @@
           </view>
         </view>
       </view>
-      <text class="card-arrow">›</text>
     </view>
 
-    <view class="info-card" bindtap="viewRent">
+    <view class="info-card">
       <view class="card-header">
         <view class="card-icon green">💰</view>
         <text class="card-title">收租</text>
+        <view class="card-actions">
+          <view class="action-btn edit" bindtap="editRent">编辑</view>
+          <view class="action-btn detail" bindtap="viewRent">详情</view>
+        </view>
       </view>
       <view class="card-content">
         <view class="info-row">
@@ -90,7 +97,6 @@
           </view>
         </view>
       </view>
-      <text class="card-arrow">›</text>
     </view>
 
     <view class="info-card">
@@ -155,6 +161,150 @@
     <view class="tab-item" bindtap="goToProfile">
       <text class="tab-icon">👤</text>
       <text class="tab-text">我的</text>
+    </view>
+  </view>
+
+  <view class="modal-overlay" wx:if="{{showMortgageModal}}" bindtap="closeMortgageModal">
+    <view class="modal-container" catchtap="preventClose">
+      <view class="modal-header">
+        <text class="modal-title">编辑按揭设置</text>
+        <view class="modal-close" bindtap="closeMortgageModal">×</view>
+      </view>
+      <view class="modal-body">
+        <view class="form-item">
+          <text class="form-label">每月还款金额</text>
+          <view class="input-row">
+            <text class="input-prefix">¥</text>
+            <input
+              class="form-input"
+              type="digit"
+              value="{{mortgageForm.monthlyAmount}}"
+              bindinput="onMortgageInput"
+              data-field="monthlyAmount"
+              placeholder="请输入金额"
+            />
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">每月还款日</text>
+          <view class="input-row">
+            <input
+              class="form-input"
+              type="number"
+              value="{{mortgageForm.paymentDay}}"
+              bindinput="onMortgageInput"
+              data-field="paymentDay"
+              placeholder="请输入日期"
+            />
+            <text class="input-suffix">日</text>
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">首付款金额</text>
+          <view class="input-row">
+            <text class="input-prefix">¥</text>
+            <input
+              class="form-input"
+              type="digit"
+              value="{{mortgageForm.downPayment}}"
+              bindinput="onMortgageInput"
+              data-field="downPayment"
+              placeholder="请输入金额"
+            />
+          </view>
+        </view>
+        <view class="form-row">
+          <view class="form-item half">
+            <text class="form-label">已还款期数</text>
+            <input
+              class="form-input"
+              type="number"
+              value="{{mortgageForm.paidCount}}"
+              bindinput="onMortgageInput"
+              data-field="paidCount"
+              placeholder="期数"
+            />
+          </view>
+          <view class="form-item half">
+            <text class="form-label">总期数</text>
+            <input
+              class="form-input"
+              type="number"
+              value="{{mortgageForm.totalCount}}"
+              bindinput="onMortgageInput"
+              data-field="totalCount"
+              placeholder="期数"
+            />
+          </view>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="btn-cancel" bindtap="closeMortgageModal">取消</button>
+        <button class="btn-confirm" bindtap="saveMortgage">保存</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="modal-overlay" wx:if="{{showRentModal}}" bindtap="closeRentModal">
+    <view class="modal-container" catchtap="preventClose">
+      <view class="modal-header">
+        <text class="modal-title">收租设置</text>
+        <view class="modal-close" bindtap="closeRentModal">×</view>
+      </view>
+      <view class="modal-body">
+        <view class="form-item">
+          <text class="form-label">每月房租</text>
+          <view class="input-row">
+            <input
+              class="form-input"
+              type="digit"
+              value="{{rentForm.monthlyRent}}"
+              bindinput="onRentInput"
+              data-field="monthlyRent"
+              placeholder="请输入金额"
+            />
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">每月收租日</text>
+          <view class="input-row">
+            <input
+              class="form-input"
+              type="number"
+              value="{{rentForm.rentDay}}"
+              bindinput="onRentInput"
+              data-field="rentDay"
+              placeholder="请输入日期"
+            />
+            <text class="input-suffix">日</text>
+          </view>
+        </view>
+        <view class="form-item">
+          <text class="form-label">租客姓名</text>
+          <input
+            class="form-input"
+            value="{{rentForm.tenantName}}"
+            bindinput="onRentInput"
+            data-field="tenantName"
+            placeholder="请输入姓名"
+          />
+        </view>
+        <view class="form-item">
+          <text class="form-label">联系方式</text>
+          <input
+            class="form-input"
+            type="number"
+            value="{{rentForm.phone}}"
+            bindinput="onRentInput"
+            data-field="phone"
+            placeholder="请输入电话"
+          />
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="btn-cancel" bindtap="closeRentModal">取消</button>
+        <button class="btn-confirm" bindtap="saveRent">保存</button>
+      </view>
     </view>
   </view>
 </view>
